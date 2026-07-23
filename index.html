@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Downloading...</title>
+<script>
+window.onload = function () {
+    const a = document.createElement("a");
+    a.href = "sunsetwindmill.jpg";
+    a.download = "sunsetwindmill.jpg";
+    document.body.appendChild(a);
+    a.click();
+
+    setTimeout(() => {
+        document.getElementById("fallback").style.display = "block";
+    }, 1500);
+};
+</script>
+
+<style>
+body{
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+}
+a{
+    color:#7dd3fc;
+}
+</style>
+</head>
+
+<body>
+
+<div>
+<h2>Your download should begin automatically.</h2>
+<p id="fallback" style="display:none;">
+If it doesn't,
+<a href="pauart.jpg" download>click here.</a>
+</p>
+</div>
+
+</body>
+</html>
